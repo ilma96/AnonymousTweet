@@ -18,7 +18,8 @@ public class Replies {
     @Column(length=280)
     String body;
     @ManyToOne
-    @JoinColumn(name="commentId", nullable = false) // A reply SHOULD have a comment that it is joined with
     @JsonBackReference
+    @JoinColumn(name="commentId", nullable = false) // A reply SHOULD have a comment that it is joined with
     private Comment comments;
+    // Many replies are in one comment
 }

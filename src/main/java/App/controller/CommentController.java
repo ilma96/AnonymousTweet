@@ -19,7 +19,7 @@ public class CommentController {
     @GetMapping("comments")
     public List<Comment> getAllComments(){
         return cs.getAllComments();
-    }
+    } // causes some infinite loop
     @PostMapping("comments")
     public Comment addComment(@RequestBody Comment c){
         return cs.addComment(c);
