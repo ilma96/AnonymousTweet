@@ -20,8 +20,8 @@ public class ReplyService {
     public List<Replies> getAllReplies(){
         return rr.findAll();
     }
-    public List<Replies> getAllRepliesById(int id){
-        return rr.findAllById(id);
+    public List<Replies> getAllRepliesByCommentId(int id){
+        return rr.getRepliesByCommentId(id);
     }
     public Replies addReply(int id, Replies r){
         Comment c = cs.getCommentId(id);

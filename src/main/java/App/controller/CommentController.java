@@ -16,10 +16,21 @@ public class CommentController {
     public CommentController(CommentService cs){
         this.cs = cs;
     }
+
+    /**
+     *
+     * @return All comments
+     */
     @GetMapping("comments")
     public List<Comment> getAllComments(){
         return cs.getAllComments();
-    } // causes some infinite loop
+    }
+
+    /**
+     *
+     * @param c (Comment Object)
+     * @return JSON body
+     */
     @PostMapping("comments")
     public Comment addComment(@RequestBody Comment c){
         return cs.addComment(c);

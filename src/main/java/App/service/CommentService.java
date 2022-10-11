@@ -16,7 +16,7 @@ public class CommentService {
     }
     public List<Comment> getAllComments(){
         return cr.findAll();
-    } // causes some infinite loop
+    }
     public Comment addComment(Comment c){
         return cr.save(c);
     }
