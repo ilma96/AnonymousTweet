@@ -15,7 +15,7 @@ public class Replies {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    @Column(length=280)
+    @Column(length=300)
     String body;
     @ManyToOne
     @JsonBackReference

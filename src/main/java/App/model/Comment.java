@@ -19,7 +19,7 @@ public class Comment {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int commentId;
-    @Column(length=280)
+    @Column(length=350)
     String texts;
     @OneToMany(mappedBy = "comments")
     @JsonManagedReference
